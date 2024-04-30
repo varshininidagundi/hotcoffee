@@ -1,0 +1,28 @@
+
+@media (min-width: 768px) {
+    .carouselExampleIndicators {
+      height: px; /* Adjust height for medium and larger screens */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .carouselExampleIndicators {
+      height: px; /* Adjust height for large screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .carouselExampleIndicators {
+      height: 450px; /* Adjust height for extra large screens */
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .carouselExampleIndicators {
+      height: 650px; /* Adjust height for extra large screens */
+    }
+  }
+  
+  .aboutus{
+    background-image: url('3.jpg');
+  }
