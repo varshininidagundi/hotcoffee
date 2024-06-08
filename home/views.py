@@ -3,15 +3,8 @@ from django.shortcuts import redirect
 from .models import *
 
 def index(request):
-    message = {
-        'variable1':"this is the 1st message",
-        'variable2':"this is the 2nd message"
-    }
     products = Product.objects.all()
-
-
     return render(request, 'index.html', {"products": products})
-    #return HttpResponse("this is homepage")
 
 def about(request): 
     return render(request, 'about.html')
@@ -19,16 +12,13 @@ def about(request):
 
 def add_to_cart(request):
     pk = request.GET.get('pk')
-
     product = Product.objects.get(pk=pk)
-
     cart = Cart.objects.create(product = product,qty = 1)
     return redirect('/')
 
 def services(request):
-
     cart = Cart.objects.all()
-    return render(request, 'cart.html',{"cart":cart})
+    return render(request, 'services.html',{'cart':cart})
     #return HttpResponse("this is services page")
 
 def addtocart(request):
